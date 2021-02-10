@@ -1,4 +1,4 @@
-package com.myRetailService.poc.service.model;
+package com.myRetailService.poc.service.initializer.service.model;
 
 public class Greeting {
 

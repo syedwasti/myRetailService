@@ -1,6 +1,5 @@
-package com.myRetailService.poc.service.initializer;
+package com.myRetailService.poc.service.initializer.service.initializer;
 
-import com.myRetailService.poc.service.initializer.MyRetailServiceApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
