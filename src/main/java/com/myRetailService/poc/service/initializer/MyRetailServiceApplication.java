@@ -1,4 +1,4 @@
-package com.myRetailService.poc;
+package com.myRetailService.poc.service.initializer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
