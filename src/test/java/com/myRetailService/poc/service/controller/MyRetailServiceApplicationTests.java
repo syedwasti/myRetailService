@@ -1,4 +1,4 @@
-package com.myRetailService.poc.service.initializer;
+package com.myRetailService.poc.service.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
