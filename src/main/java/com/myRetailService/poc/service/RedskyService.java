@@ -30,24 +30,23 @@ public class RedskyService {
     public Product getRedskyProduct(String id) {
 
         String serviceURL = "https://redsky.target.com/v3/pdp/tcin/" +
-                id + "?excludes=taxonomy,price,promotion,bulk_ship,rating_and_review_reviews,rating_and_review_statistics,question_answer_statistics&key=candidate";
+                id + "?excludes=taxonomy,price,promotion,bulk_ship,rating_and_review_reviews," +
+                "rating_and_review_statistics,question_answer_statistics&key=candidate";
         HttpEntity<String> requestEntity = new HttpEntity<String>("", headers);
         try {
             Product product = new Product();
             ResponseEntity<String> responseEntity = rest.exchange(serviceURL, HttpMethod.GET, requestEntity, String.class);
-            LOG.info("Response StatusCode: " + (responseEntity.getStatusCode()));
             ObjectMapper mapper = new ObjectMapper();
             Map<String, Map> map = mapper.readValue(responseEntity.getBody(), Map.class);
-            Map<String, Map> productMap = map.get("product");
-            Map<String, Map> itemMap = productMap.get("item");
-            Map<String, String> tcinMap = productMap.get("item");
-            Map<String, String> productDescriptionMap = itemMap.get("product_description");
-            product.setId(tcinMap.get("tcin"));
-            product.setpName(productDescriptionMap.get("title"));
-            LOG.info("Redsky Product: " + product.getId() +": " + product.getpName());
+            Map<String, Map> pMap = map.get("product");
+            Map<String, Map> iMap = pMap.get("item");
+            Map<String, String> tMap = pMap.get("item");
+            Map<String, String> productDescMap = iMap.get("product_description");
+            product.setId(tMap.get("tcin"));
+            product.setpName(productDescMap.get("title"));
             return product;
         } catch (Exception ex) {
-            LOG.info("Redsky Not Found: " + ex.getMessage());
+            LOG.error("Redsky Product Not Found: " + ex.getMessage());
             throw new ProductNotFoundException("Redsky Product Not Found for id: " + id);
         }
     }
