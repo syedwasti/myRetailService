@@ -3,6 +3,8 @@ package com.myRetailService.poc.controller;
 import com.myRetailService.poc.exception.ProductNotFoundException;
 import com.myRetailService.poc.model.Product;
 import com.myRetailService.poc.service.ProductService;
+import org.apache.tomcat.util.json.ParseException;
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.http.HttpStatus;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.ExecutionException;
 
 
 @RestController
@@ -31,7 +34,7 @@ public class ProductController {
 
     @GetMapping("/api/v1/products/{id}")
     @ResponseBody
-    public Product getProduct(@PathVariable String id) throws ProductNotFoundException {
+    public Product getProduct(@PathVariable String id) {
         return productService.getProduct(id);
     }
 
@@ -39,7 +42,7 @@ public class ProductController {
     @ResponseBody
     public ResponseEntity<Object> updateProduct(@PathVariable String id, @RequestBody Product product) {
         productService.updateProduct(id, product);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok("Record Successfully updated for ID: " + id);
     }
 
 }

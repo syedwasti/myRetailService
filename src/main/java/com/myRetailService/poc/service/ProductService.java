@@ -4,12 +4,8 @@ import com.myRetailService.poc.dao.ProductRepository;
 import com.myRetailService.poc.exception.BadRequestException;
 import com.myRetailService.poc.exception.ProductNotFoundException;
 import com.myRetailService.poc.model.Product;
-import org.jvnet.hk2.annotations.Service;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 @Component
