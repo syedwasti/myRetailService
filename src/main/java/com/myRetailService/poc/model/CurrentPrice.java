@@ -1,4 +1,4 @@
-package com.myRetailService.poc.service.model;
+package com.myRetailService.poc.model;
 
 public class CurrentPrice {
 
@@ -9,6 +9,7 @@ public class CurrentPrice {
         this.currency_code = currency_code;
         this.value = value;
     }
+
     public String getValue() {
         return value;
     }
