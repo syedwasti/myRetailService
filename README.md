@@ -16,3 +16,12 @@ Build an application that performs the following actions:
 * Reads pricing information from a NoSQL data store and combines it with the product id and name from the HTTP request into a single response.  
 * BONUS: Accepts an HTTP PUT request at the same path (/products/{id}), containing a JSON request body similar to the GET response, and updates the product’s price in the data store.  
 
+#myRetail RESTful service Platform: 
+Java version 11
+Spring Boot Version 2.4.2
+MongoDB Version 4.4.3
+
+RESTApi's:
+1. GET /api/v1/products/{id} (Gets product data for the given id)
+2. PUT /api/v1/products/{id} (Updates product priving for the given id)
+3. GET /api/v1/products (Lists all products from the DB)
