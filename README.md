@@ -1,4 +1,4 @@
-#myRetail RESTful service
+# myRetail RESTful service
 
 myRetail is a rapidly growing company with HQ in Richmond, VA and over 200 stores across the east coast. myRetail wants to make its internal data available to any number of client devices, from myRetail.com to native mobile apps.
 
@@ -16,14 +16,14 @@ Build an application that performs the following actions:
 * Reads pricing information from a NoSQL data store and combines it with the product id and name from the HTTP request into a single response.  
 * BONUS: Accepts an HTTP PUT request at the same path (/products/{id}), containing a JSON request body similar to the GET response, and updates the product’s price in the data store.  
 
-#myRetail RESTful service Platform: 
+## myRetail RESTful service Platform: 
 * Java version 11
 * Spring Boot Version 2.4.2
 * MongoDB Community Version 4.4.3
 * Maven Build System
 * Swagger Version 2.9.2 for API Documentation
 
-#RESTApi's:
+## RESTApi's:
 1. GET /api/v1/products/{id} (Retrieves the product name from an external/Redsky API and pricing information from MongoDB)
 2. PUT /api/v1/products/{id} (Updates product pricing for the given id in MongoDB)
 3. GET /api/v1/products (Lists all products from MongoDB)
@@ -31,13 +31,13 @@ Build an application that performs the following actions:
 5. Delete /api/v1/products/{id} (Deletes the record from MongoDB)
 6. Swagger API Documentaion /swagger-ui.html#/
 
-#Usefull commands to Run the app:
+## Usefull commands to Run the app:
 * Start MongoDB Locally: brew services start mongodb-community@4.4
 * To check Services running: brew service list  
 * To build the app: mvn clean install
 * To Run the app: 
-  ** java -jar target/myRetailService-0.0.1-SNAPSHOT.jar
-  ** mvn spring-boot:run
+    * java -jar target/myRetailService-0.0.1-SNAPSHOT.jar
+    * mvn spring-boot:run
 * Tu build and run: mvn clean install spring-boot:run  
 * To Stop MongoDB: brew services stop mongodb-community@4.4
 
