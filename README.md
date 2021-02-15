@@ -17,11 +17,11 @@ Build an application that performs the following actions:
 * BONUS: Accepts an HTTP PUT request at the same path (/products/{id}), containing a JSON request body similar to the GET response, and updates the product’s price in the data store.  
 
 ## myRetail RESTful service Platform: 
-* Java **version 11
-* Spring Boot **Version 2.4.2
-* MongoDB Community **Version 4.4.3
-* Maven Build System **Version 3.6.3
-* Swagger API Documentation **Version 2.9.2 
+* Java **version 11**
+* Spring Boot **Version 2.4.2**
+* MongoDB Community **Version 4.4.3**
+* Maven Build System **Version 3.6.3**
+* Swagger API Documentation **Version 2.9.2** 
 
 ## RESTApi's:
 1. GET **/api/v1/products/{id}** (Retrieves the product name from an external/Redsky API and pricing information from MongoDB)
@@ -32,12 +32,12 @@ Build an application that performs the following actions:
 6. Swagger API Documentaion **/swagger-ui.html#/**
 
 ## Usefull commands to Run the app:
-* Start MongoDB Locally: **brew services start mongodb-community@4.4
-* To check Services running: **brew service list  
-* To build the app: **mvn clean install
+* Start MongoDB Locally: **brew services start mongodb-community@4.4**
+* To check Services running: **brew service list**
+* To build the app: **mvn clean install**
 * To Run the app: 
-    * **java -jar target/myRetailService-0.0.1-SNAPSHOT.jar
-    * **mvn spring-boot:run
-* Tu build and run: **mvn clean install spring-boot:run  
-* To Stop MongoDB: **brew services stop mongodb-community@4.4
+    * **java -jar target/myRetailService-0.0.1-SNAPSHOT.jar**
+    * **mvn spring-boot:run**
+* Tu build and run: **mvn clean install spring-boot:run**
+* To Stop MongoDB: **brew services stop mongodb-community@4.4**
 
