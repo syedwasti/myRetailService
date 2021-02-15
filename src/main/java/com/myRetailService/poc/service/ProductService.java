@@ -50,4 +50,22 @@ public class ProductService {
         productRepository.save(product);
         return productRepository.findByid(id);
     }
+
+    public Product createProduct(Product product) {
+        if(product.getId() == null || product.getCurrent_price().getValue() == null ||
+            product.getCurrent_price().getCurrency_code() == null) {
+            LOG.error("Product required fields are missing " + product.toString());
+            throw new BadRequestException("Product required fields are missing");
+        }
+        return productRepository.save(product);
+    }
+
+    public void deleteProduct(String id) {
+        Product product = productRepository.findByid(id);
+        if(product == null) {
+            LOG.error("Product Not Found for id: " + id);
+            throw new ProductNotFoundException("Product Not Found for id: " + id);
+        }
+        productRepository.delete(product);
+    }
 }
