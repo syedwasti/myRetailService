@@ -38,7 +38,7 @@ Build an application that performs the following actions:
         * 200 OK
 4. POST **/api/v1/products** (Creates a new Prodcut record in MongoDB)
     * Supported HTTPStatus Codes:
-       * 200 OK
+       * 201 Created
        * 400 Bad Request (when missing required parameters)
 5. Delete **/api/v1/products/{id}** (Deletes the record from MongoDB)
     * Supported HTTPStatus Codes:
