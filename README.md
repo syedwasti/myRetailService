@@ -23,12 +23,27 @@ Build an application that performs the following actions:
 * Maven Build System **Version 3.6.3**
 * Swagger API Documentation **Version 2.9.2** 
 
-## RESTApi's:
+## Supported RESTApi's:
 1. GET **/api/v1/products/{id}** (Retrieves the product name from an external/Redsky API and pricing information from MongoDB)
+    1.1 Supported HTTPStatus Codes:
+        1.1.1 200 OK
+        1.1.2 404 Prodcut Not Found
 2. PUT **/api/v1/products/{id}** (Updates product pricing for the given id in MongoDB)
+    2.1 Supported HTTPStatus Codes:
+        2.1.1 200 OK
+        2.1.2 404 Prodcut Not Found
+        2.1.3 400 Bad Request (when missing required parameters or mismatch ID's)
 3. GET **/api/v1/products** (Lists all products from MongoDB)
+    3.1 Supported HTTPStatus Codes:
+        3.1.1 200 OK
 4. POST **/api/v1/products** (Creates a new Prodcut record in MongoDB)
+    4.1 Supported HTTPStatus Codes:
+        4.1.1 200 OK
+        4.1.2 400 Bad Request (when missing required parameters)
 5. Delete **/api/v1/products/{id}** (Deletes the record from MongoDB)
+    4.1 Supported HTTPStatus Codes:
+        4.1.1 200 OK
+        4.1.2 404 Prodcut Not Found
 6. Swagger API Documentaion **/swagger-ui.html#/**
 
 ## Usefull commands to Run the app:
