@@ -25,9 +25,9 @@ Build an application that performs the following actions:
 
 ## Supported RESTApi's:
 1. GET **/api/v1/products/{id}** (Retrieves the product name from an external/Redsky API and pricing information from MongoDB)
-    1.1 Supported HTTPStatus Codes:
-        1.1.1 200 OK
-        1.1.2 404 Prodcut Not Found
+  1.1 Supported HTTPStatus Codes:
+    1.1.1 200 OK
+    1.1.2 404 Prodcut Not Found
 2. PUT **/api/v1/products/{id}** (Updates product pricing for the given id in MongoDB)
     2.1 Supported HTTPStatus Codes:
         2.1.1 200 OK
